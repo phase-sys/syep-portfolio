@@ -11,7 +11,7 @@ export default function Projects() {
       <p className="text-xl">Projects</p>
       <p className="text-sm text-gray-600">
         Here are some of the projects I’ve worked on, showcasing my skills in
-        web development, UI/UX design, and software engineering.
+        graphic design, branding, and visual storytelling.
       </p>
 
       <ImageCarousel projectData={projectData} />
