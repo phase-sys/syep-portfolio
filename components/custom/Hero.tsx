@@ -10,7 +10,7 @@ export default function Hero() {
   }
 
   return (
-    <div className="relative h-full min-h-[50vh] md:min-h-[90vh] flex justify-center items-center md:p-8 transition-all duration-500 ease-in-out md:mt-[-50]">
+    <div className="relative h-full min-h-[50vh] md:min-h-[90vh] flex justify-center items-center md:p-8 transition-all duration-500 ease-in-out md:-mt-12">
       <div className="inset-0">
         <Image
           src="/images/bg.png"
