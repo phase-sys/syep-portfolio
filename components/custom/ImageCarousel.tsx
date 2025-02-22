@@ -1,15 +1,12 @@
-// 'use-client'
+'use client'
 
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  // CarouselNext,
-  // CarouselPrevious,
 } from '@/components/ui/carousel'
 import Image from 'next/image'
-// import Autoplay from 'embla-carousel-autoplay'
-// import { useRef } from 'react'
+import Autoplay from 'embla-carousel-autoplay'
 
 type Project = {
   id: number
@@ -22,15 +19,15 @@ type ImageCarouselProps = {
 }
 
 export default function ImageCarousel({ projectData }: ImageCarouselProps) {
-  // const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }))
-
   return (
-    <div className="mt-4 mx-12">
+    <div className="flex justify-center align-middle mt-4 mx-12">
       <Carousel
-      // plugins={[plugin.current]}
-      // className="w-full max-w-xs"
-      // onMouseEnter={plugin.current.stop}
-      // onMouseLeave={plugin.current.reset}
+        className="w-full max-w-xs"
+        plugins={[
+          Autoplay({
+            delay: 4000,
+          }),
+        ]}
       >
         <CarouselContent>
           {projectData.map((project) => (
@@ -48,8 +45,6 @@ export default function ImageCarousel({ projectData }: ImageCarouselProps) {
             </CarouselItem>
           ))}
         </CarouselContent>
-        {/* <CarouselPrevious />
-        <CarouselNext /> */}
       </Carousel>
     </div>
   )

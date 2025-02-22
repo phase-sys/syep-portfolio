@@ -10,7 +10,7 @@ export default function Hero() {
   }
 
   return (
-    <div className="relative h-full min-h-[50vh] md:min-h-[90vh] flex justify-center items-center md:p-8 transition-all duration-500 ease-in-out md:z-50 md:mt-[-50]">
+    <div className="relative h-full min-h-[50vh] md:min-h-[90vh] flex justify-center items-center md:p-8 transition-all duration-500 ease-in-out md:mt-[-50]">
       <div className="inset-0">
         <Image
           src="/images/bg.png"
@@ -29,7 +29,7 @@ export default function Hero() {
 
       <div
         onClick={scrollToNextSection}
-        className="hidden md:block absolute bottom-0 cursor-pointer justify-center items-center p-2 bg-black rounded-full animate-bounce"
+        className="hidden md:block absolute bottom-0 cursor-pointer justify-center items-center p-2 bg-black opacity-80 hover:opacity-90 rounded-full animate-bounce"
       >
         <FaArrowDown className="text-white text-lg" />
       </div>

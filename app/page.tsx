@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
-      <div id="next-section" className="md:pt-24 mx-12 md:mx-72">
+      <div id="next-section" className="md:pt-24 mx-12 md:mx-36 lg:mx-72">
         <Projects />
       </div>
     </>
