@@ -9,10 +9,7 @@ export default function Home() {
     <>
       <NavbarCustom />
       <Hero />
-      <div
-        id="next-section"
-        className="md:pt-12 mx-12 md:mx-36 lg:mx-48 xl:mx-72"
-      >
+      <div id="next-section" className="pt-12 mx-12 md:mx-36 lg:mx-48 xl:mx-72">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8">
           <CollectionCard
             href={arts.href}

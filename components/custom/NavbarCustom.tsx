@@ -26,8 +26,8 @@ export default function NavbarCustom() {
       className={clsx(
         'sticky top-0 transition-all duration-300 ease-in-out z-50',
         {
-          'md:transform md:-translate-y-full md:opacity-0': !isScrolled, // Navbar hidden
-          'md:transform md:translate-y-0 md:opacity-100': isScrolled, // Navbar visible
+          'sm:transform sm:-translate-y-full sm:opacity-0': !isScrolled, // Navbar hidden
+          'sm:transform sm:translate-y-0 sm:opacity-100': isScrolled, // Navbar visible
         }
       )}
     >
