@@ -58,6 +58,7 @@ export default {
   		},
       fontFamily: {
         display: ['var(--font-playfair-display)'],
+        decorative: ['var(--font-oi)'],
       },
   	}
   },

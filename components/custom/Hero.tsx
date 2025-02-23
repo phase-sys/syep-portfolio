@@ -23,7 +23,7 @@ export default function Hero() {
         />
       </div>
 
-      <h1 className="absolute text-white text-lg md:text-4xl lg:text-6xl transition-all duration-500 ease-in-out font-display">
+      <h1 className="absolute text-white text-lg md:text-4xl lg:text-5xl transition-all duration-500 ease-in-out font-decorative">
         Syepselin
       </h1>
 

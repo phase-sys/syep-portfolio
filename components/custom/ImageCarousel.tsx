@@ -7,12 +7,7 @@ import {
 } from '@/components/ui/carousel'
 import Image from 'next/image'
 import Autoplay from 'embla-carousel-autoplay'
-
-export type ImageMeta = {
-  id: number
-  src: string
-  alt: string
-}
+import { ImageMeta } from '@/lib/data'
 
 type ImageCarouselProps = {
   imageMeta: ImageMeta[]
@@ -20,9 +15,8 @@ type ImageCarouselProps = {
 
 export default function ImageCarousel({ imageMeta }: ImageCarouselProps) {
   return (
-    <div className="flex justify-center align-middle mt-4 mx-12">
+    <div className="flex justify-center align-middle mt-4">
       <Carousel
-        className="w-full max-w-xs"
         plugins={[
           Autoplay({
             delay: 4000,

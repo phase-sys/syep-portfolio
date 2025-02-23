@@ -1,6 +1,19 @@
 import fs from 'fs';
 import path from 'path';
 
+export interface ICollection {
+  href: string
+  title: string
+  description: string
+  collectionData: ImageMeta[]
+}
+
+export interface ImageMeta {
+  id: number
+  src: string
+  alt: string
+}
+
 // Function
 const BASE_DIR = 'public/images';
 const BASE_URL = 'images';
@@ -23,6 +36,7 @@ const generateImageCollection = (subDir: string, altPrefix: string) => {
 
 // Collections
 export const projects_nstp = {
+  href:'/projects/nstp',
   title: 'Project_NSTP',
   description:
     'A collection of projects completed under the National Service Training Program (NSTP) of the Philippines, focusing on community development, civic responsibility, and nation-building through service-oriented initiatives.',
@@ -30,6 +44,7 @@ export const projects_nstp = {
 };
 
 export const arts = {
+  href: '/arts',
   title: 'Arts',
   description:
     'A collection of creative works highlighting my passion for visual arts, from graphic design and branding to immersive storytelling through imagery.',

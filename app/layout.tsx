@@ -1,9 +1,18 @@
 import type { Metadata } from 'next'
 import { Playfair_Display } from 'next/font/google'
+import { Oi } from 'next/font/google'
+
 import './globals.css'
 
 const playfairDisplay = Playfair_Display({
   variable: '--font-playfair-display',
+  subsets: ['latin'],
+})
+
+const oi = Oi({
+  variable: '--font-oi',
+  weight: ['400'],
+  style: ['normal'],
   subsets: ['latin'],
 })
 
@@ -19,7 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${playfairDisplay.variable} antialiased`}>
+      <body
+        className={`${playfairDisplay.variable} ${oi.variable} antialiased`}
+      >
         {children}
       </body>
     </html>
