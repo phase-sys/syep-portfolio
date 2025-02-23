@@ -33,16 +33,14 @@ export default function Collection({ collection }: CollectionProps) {
   ]
 
   return (
-    <div className="h-[100vh]">
-      <div className="pt-8 pb-12">
-        <div className="text-sm">{breadcrumbs}</div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <ImageCarousel imageMeta={collection.collectionData} />
-          <div className="flex flex-col items-center justify-center text-center">
-            <h1 className="font-decorative text-4xl">{collection.title}</h1>
-            <Separator className="my-2 w-1/2" />
-            <p className="font-display">{collection.description}</p>
-          </div>
+    <div className="pt-8 pb-12">
+      <div className="text-sm">{breadcrumbs}</div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <ImageCarousel imageMeta={collection.collectionData} />
+        <div className="flex flex-col items-center justify-center text-center">
+          <h1 className="font-decorative text-4xl">{collection.title}</h1>
+          <Separator className="my-2 w-1/2" />
+          <p className="font-display">{collection.description}</p>
         </div>
       </div>
     </div>

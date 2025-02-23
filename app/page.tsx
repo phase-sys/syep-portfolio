@@ -1,7 +1,8 @@
 import Hero from '@/components/custom/Hero'
 import CollectionCard from '@/components/custom/CollectionCard'
-import { arts, projects_nstp } from '@/lib/data'
+import { arts, layout, projects_nstp } from '@/lib/data'
 import NavbarCustom from '@/components/custom/NavbarCustom'
+import Footer from '@/components/custom/Footer'
 
 export default function Home() {
   return (
@@ -14,19 +15,26 @@ export default function Home() {
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8">
           <CollectionCard
-            href={projects_nstp.href}
-            title={projects_nstp.title}
-            description={projects_nstp.description}
-            collectionData={projects_nstp.collectionData[0]}
-          />
-          <CollectionCard
             href={arts.href}
             title={arts.title}
             description={arts.description}
             collectionData={arts.collectionData[0]}
           />
+          <CollectionCard
+            href={layout.href}
+            title={layout.title}
+            description={layout.description}
+            collectionData={layout.collectionData[0]}
+          />
+          <CollectionCard
+            href={projects_nstp.href}
+            title={projects_nstp.title}
+            description={projects_nstp.description}
+            collectionData={projects_nstp.collectionData[0]}
+          />
         </div>
       </div>
+      <Footer />
     </>
   )
 }

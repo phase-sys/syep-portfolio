@@ -50,3 +50,11 @@ export const arts = {
     'A collection of creative works highlighting my passion for visual arts, from graphic design and branding to immersive storytelling through imagery.',
   collectionData: generateImageCollection('arts', 'Art'),
 };
+
+export const layout = {
+  href: '/layout',
+  title: 'Layout',
+  description:
+    'A showcase of expertly crafted layouts blending structure and creativity—featuring designs that balance form, function, and visual harmony across digital and print media.',
+  collectionData: generateImageCollection('layout', 'Layout'),
+};
