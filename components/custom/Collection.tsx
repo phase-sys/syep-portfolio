@@ -34,7 +34,7 @@ export default function Collection({ collection }: CollectionProps) {
 
   return (
     <div className="h-[100vh]">
-      <div className="pt-8 pb-24">
+      <div className="pt-8 pb-12">
         <div className="text-sm">{breadcrumbs}</div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <ImageCarousel imageMeta={collection.collectionData} />
