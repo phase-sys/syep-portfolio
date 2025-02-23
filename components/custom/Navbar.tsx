@@ -22,6 +22,13 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault()
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }, 300)
+  }
+
   return (
     <div
       className={clsx(
@@ -35,13 +42,16 @@ export default function Navbar() {
       <div className="flex justify-between items-center mx-12 md:mx-36 lg:mx-72">
         <Link
           href={'/'}
-          className="text-pink-500 text-xl md:text-2xl font-bold font-display hover:text-pink-700 transition-all duration-300 ease-in-out"
+          onClick={handleLogoClick}
+          className="text-pink-500 text-xl md:text-2xl font-bold font-display hover:text-opacity-60  transition-all duration-300 ease-in-out"
         >
           Syepselin
         </Link>
         <Link
           href={'/files/resume.pdf'}
-          className="text-white bg-pink-500 hover:bg-opacity-60 font-bold text-sm  font-serif px-4 py-2 rounded-full"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white bg-pink-500 hover:bg-opacity-60 font-bold text-sm font-serif px-4 py-2 rounded-full"
         >
           <FileText size={18} />
         </Link>
