@@ -1,6 +1,6 @@
 import Hero from '@/components/custom/Hero'
 import CollectionCard from '@/components/custom/CollectionCard'
-import { arts, layout, projects_nstp } from '@/lib/data'
+import { arts, layouts, projects_nstp } from '@/lib/data'
 import NavbarCustom from '@/components/custom/NavbarCustom'
 import Footer from '@/components/custom/Footer'
 
@@ -21,10 +21,10 @@ export default function Home() {
             collectionData={arts.collectionData[0]}
           />
           <CollectionCard
-            href={layout.href}
-            title={layout.title}
-            description={layout.description}
-            collectionData={layout.collectionData[0]}
+            href={layouts.href}
+            title={layouts.title}
+            description={layouts.description}
+            collectionData={layouts.collectionData[0]}
           />
           <CollectionCard
             href={projects_nstp.href}

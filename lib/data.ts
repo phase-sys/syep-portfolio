@@ -51,10 +51,10 @@ export const arts = {
   collectionData: generateImageCollection('arts', 'Art'),
 };
 
-export const layout = {
-  href: '/layout',
-  title: 'Layout',
+export const layouts = {
+  href: '/layouts',
+  title: 'Layouts',
   description:
     'A showcase of expertly crafted layouts blending structure and creativity—featuring designs that balance form, function, and visual harmony across digital and print media.',
-  collectionData: generateImageCollection('layout', 'Layout'),
+  collectionData: generateImageCollection('layouts', 'Layouts'),
 };
