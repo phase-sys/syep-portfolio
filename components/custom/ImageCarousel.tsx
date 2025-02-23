@@ -8,17 +8,17 @@ import {
 import Image from 'next/image'
 import Autoplay from 'embla-carousel-autoplay'
 
-type Project = {
+export type ImageMeta = {
   id: number
   src: string
   alt: string
 }
 
 type ImageCarouselProps = {
-  projectData: Project[]
+  imageMeta: ImageMeta[]
 }
 
-export default function ImageCarousel({ projectData }: ImageCarouselProps) {
+export default function ImageCarousel({ imageMeta }: ImageCarouselProps) {
   return (
     <div className="flex justify-center align-middle mt-4 mx-12">
       <Carousel
@@ -30,14 +30,14 @@ export default function ImageCarousel({ projectData }: ImageCarouselProps) {
         ]}
       >
         <CarouselContent>
-          {projectData.map((project) => (
+          {imageMeta.map((meta) => (
             <CarouselItem
-              key={project.id}
+              key={meta.id}
               className="flex justify-center items-center"
             >
               <Image
-                src={project.src}
-                alt={project.alt}
+                src={meta.src}
+                alt={meta.alt}
                 width={400}
                 height={300}
                 className="rounded-xl shadow-lg"
