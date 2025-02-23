@@ -22,19 +22,17 @@ export default function ImageCarousel({ imageMeta }: ImageCarouselProps) {
             delay: 4000,
           }),
         ]}
+        className="shadow-2xl rounded-2xl"
       >
         <CarouselContent>
           {imageMeta.map((meta) => (
-            <CarouselItem
-              key={meta.id}
-              className="flex justify-center items-center"
-            >
+            <CarouselItem key={meta.id}>
               <Image
                 src={meta.src}
                 alt={meta.alt}
                 width={400}
-                height={300}
-                className="rounded-xl shadow-lg"
+                height={350}
+                className="rounded-xl w-full h-full object-scale-down bg-white"
               />
             </CarouselItem>
           ))}

@@ -36,8 +36,8 @@ const generateImageCollection = (subDir: string, altPrefix: string) => {
 
 // Collections
 export const projects_nstp = {
-  href:'/projects/nstp',
-  title: 'Project_NSTP',
+  href:'/nstp',
+  title: 'Project: NSTP',
   description:
     'A collection of projects completed under the National Service Training Program (NSTP) of the Philippines, focusing on community development, civic responsibility, and nation-building through service-oriented initiatives.',
   collectionData: generateImageCollection('projects/nstp', 'Project'),
