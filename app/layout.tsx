@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Playfair_Display } from 'next/font/google'
 import { Oi } from 'next/font/google'
-
+import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
 
 const playfairDisplay = Playfair_Display({
@@ -32,6 +32,7 @@ export default function RootLayout({
         className={`${playfairDisplay.variable} ${oi.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   )
