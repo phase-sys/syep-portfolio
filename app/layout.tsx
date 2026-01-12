@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
-import { Playfair_Display } from 'next/font/google'
-import { Oi } from 'next/font/google'
+import { Playfair_Display, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
 
@@ -9,10 +8,8 @@ const playfairDisplay = Playfair_Display({
   subsets: ['latin'],
 })
 
-const oi = Oi({
-  variable: '--font-oi',
-  weight: ['400'],
-  style: ['normal'],
+const inter = Inter({
+  variable: '--font-inter',
   subsets: ['latin'],
 })
 
@@ -29,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playfairDisplay.variable} ${oi.variable} antialiased`}
+        className={`${playfairDisplay.variable} ${inter.variable} antialiased`}
       >
         {children}
         <Analytics />

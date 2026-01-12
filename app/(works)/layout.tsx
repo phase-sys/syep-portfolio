@@ -1,4 +1,4 @@
-import Footer from '@/components/custom/Footer'
+import ReachOut from '@/components/custom/ReachOut'
 
 export default function RootLayout({
   children,
@@ -6,9 +6,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="h-[100vh]">
-      <div className="mx-12 md:mx-36 lg:mx-48 xl:mx-72">{children}</div>
-      <Footer />
+    <div className="min-h-screen bg-background text-foreground flex flex-col">
+      <div className="flex-1">
+        {children}
+      </div>
+      <div className="container mx-auto px-6">
+        <ReachOut />
+      </div>
     </div>
   )
 }
