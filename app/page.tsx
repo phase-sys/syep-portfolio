@@ -1,13 +1,15 @@
-import Hero from '@/components/custom/Hero'
-import CollectionCard from '@/components/custom/CollectionCard'
-import { arts, layouts, projects_nstp } from '@/lib/data'
+import Hero from "@/components/custom/Hero";
+import CollectionCard from "@/components/custom/CollectionCard";
+import { arts, layouts, projects_nstp } from "@/lib/data";
 
-import Link from 'next/link'
-import Navbar from '@/components/custom/Navbar'
-import ReachOut from '@/components/custom/ReachOut'
+import Link from "next/link";
+import Navbar from "@/components/custom/Navbar";
+import ReachOut from "@/components/custom/ReachOut";
 
-import SectionHeader from '@/components/custom/SectionHeader'
-import StaggerContainer, { StaggerItem } from '@/components/custom/StaggerContainer'
+import SectionHeader from "@/components/custom/SectionHeader";
+import StaggerContainer, {
+  StaggerItem,
+} from "@/components/custom/StaggerContainer";
 
 export default function Home() {
   return (
@@ -15,11 +17,10 @@ export default function Home() {
       <Navbar />
       <Hero />
       <div id="creative-work" className="container mx-auto px-6 py-24">
-        
         {/* Creative Works Section */}
         <section className="mb-48">
-          <SectionHeader 
-            title="Selected Works" 
+          <SectionHeader
+            title="Selected Works"
             subtitle="Art Direction & Visual Design"
           />
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20 lg:gap-y-32">
@@ -46,10 +47,7 @@ export default function Home() {
 
         {/* Projects Section */}
         <section id="featured-projects" className="mb-48">
-          <SectionHeader 
-            title="Projects" 
-            subtitle="Community & Initiatives"
-          />
+          <SectionHeader title="Projects" subtitle="Community & Initiatives" />
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20 lg:gap-y-32">
             <StaggerItem>
               <CollectionCard
@@ -65,8 +63,7 @@ export default function Home() {
 
         {/* Reach Out Section */}
         <ReachOut />
-
       </div>
     </>
-  )
+  );
 }
