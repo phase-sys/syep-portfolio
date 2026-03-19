@@ -1,10 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* font-family is provided by `next/font` in `app/layout.tsx` via CSS variables */
 
 @layer base {
   :root {
@@ -26,7 +22,7 @@ body {
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 322 81% 96%; /* Very subtle pink tint for accents */
+    --accent: 322 81% 96%;
     --accent-foreground: 322 81% 63%;
 
     --destructive: 0 84.2% 60.2%;
@@ -38,11 +34,7 @@ body {
 
     --radius: 0rem;
 
-    --chart-1: 322 81% 63%;
-    --chart-2: 280 60% 60%;
-    --chart-3: 190 70% 60%;
-    --chart-4: 40 90% 60%;
-    --chart-5: 20 80% 60%;
+    --gallery-line: 0 0% 80%;
   }
 
   .dark {
@@ -65,28 +57,41 @@ body {
     --border: 320 40% 20%;
     --input: 320 40% 20%;
     --ring: 322 81% 63%;
-    --chart-1: 322 81% 63%;
-    --chart-2: 280 60% 60%;
-    --chart-3: 190 70% 60%;
-    --chart-4: 40 90% 60%;
-    --chart-5: 20 80% 60%;
+
+    --gallery-line: 320 20% 28%;
   }
 }
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
+    outline-color: hsl(var(--ring));
+  }
+  html {
+    scroll-behavior: smooth;
   }
   body {
-    @apply bg-background text-foreground;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
   }
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
+@layer utilities {
+  .gallery-divider {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      hsl(var(--foreground)) 0%,
+      hsl(var(--foreground)) 100%
+    );
   }
-  body {
-    @apply bg-background text-foreground;
+
+  .gallery-divider-fade {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      hsl(var(--border)) 0%,
+      hsl(var(--border)) 100%
+    );
   }
 }

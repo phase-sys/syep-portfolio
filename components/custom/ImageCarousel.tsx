@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ExternalLink, Search } from "lucide-react";
@@ -10,6 +10,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import {
@@ -25,6 +26,24 @@ type ImageCarouselProps = {
 };
 
 export default function ImageCarousel({ imageMeta }: ImageCarouselProps) {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const total = imageMeta.length;
+
+  const onSelect = useCallback(() => {
+    if (!api) return;
+    setCurrent(api.selectedScrollSnap());
+  }, [api]);
+
+  useEffect(() => {
+    if (!api) return;
+    onSelect();
+    api.on("select", onSelect);
+    return () => {
+      api.off("select", onSelect);
+    };
+  }, [api, onSelect]);
+
   return (
     <motion.div
       className="w-full"
@@ -34,6 +53,7 @@ export default function ImageCarousel({ imageMeta }: ImageCarouselProps) {
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       <Carousel
+        setApi={setApi}
         plugins={[
           Autoplay({
             delay: 4000,
@@ -87,6 +107,16 @@ export default function ImageCarousel({ imageMeta }: ImageCarouselProps) {
             </CarouselItem>
           ))}
         </CarouselContent>
+
+        {/* Slide counter */}
+        <div className="flex items-center justify-center mt-8 gap-6">
+          <span className="text-xs font-sans font-bold tracking-[0.2em] text-muted-foreground tabular-nums">
+            {String(current + 1).padStart(2, "0")}{" "}
+            <span className="text-muted-foreground/40 mx-1">/</span>{" "}
+            {String(total).padStart(2, "0")}
+          </span>
+        </div>
+
         <div className="hidden md:block">
           <CarouselPrevious className="left-8 h-12 w-12 rounded-full border border-foreground/10 bg-background/50 hover:bg-foreground hover:text-background text-foreground transition-all backdrop-blur-sm" />
           <CarouselNext className="right-8 h-12 w-12 rounded-full border border-foreground/10 bg-background/50 hover:bg-foreground hover:text-background text-foreground transition-all backdrop-blur-sm" />

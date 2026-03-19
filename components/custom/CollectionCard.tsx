@@ -29,7 +29,7 @@ export default function CollectionCard({
         </div>
 
         <div className="mt-5 px-1">
-          <h3 className="text-xl md:text-2xl font-serif font-bold tracking-tight text-foreground group-hover:text-primary transition-colors duration-300">
+          <h3 className="text-xl md:text-2xl font-serif font-bold tracking-tight text-foreground group-hover:text-primary transition-colors duration-300 italic">
             {title}
           </h3>
           <p className="text-sm md:text-base text-muted-foreground font-sans mt-2 line-clamp-2 leading-relaxed max-w-md">

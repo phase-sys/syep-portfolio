@@ -7,7 +7,7 @@ export default function ReachOut() {
 
       <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto space-y-12">
         <h2 className="text-4xl md:text-6xl font-serif font-medium text-foreground tracking-tight leading-tight">
-          Let's create something
+          Let&apos;s create something
           <br /> <span className="text-muted-foreground italic">timeless</span>.
         </h2>
 

@@ -2,7 +2,6 @@ import Hero from "@/components/custom/Hero";
 import CollectionCard from "@/components/custom/CollectionCard";
 import { arts, layouts, projects_nstp } from "@/lib/data";
 
-import Link from "next/link";
 import Navbar from "@/components/custom/Navbar";
 import ReachOut from "@/components/custom/ReachOut";
 
@@ -57,7 +56,6 @@ export default function Home() {
                 collectionData={projects_nstp.collectionData[0]}
               />
             </StaggerItem>
-            {/* Placeholder for future projects */}
           </StaggerContainer>
         </section>
 

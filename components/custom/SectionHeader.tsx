@@ -26,7 +26,7 @@ export default function SectionHeader({ title, subtitle }: SectionHeaderProps) {
           {title}
         </h2>
 
-        <div className="w-24 h-px bg-foreground mt-8 mb-8" />
+        <div className="gallery-divider w-24 mt-8 mb-8" />
       </motion.div>
     </div>
   );

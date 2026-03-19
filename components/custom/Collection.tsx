@@ -2,7 +2,6 @@
 
 import { ICollection } from "@/lib/data";
 import ImageCarousel from "@/components/custom/ImageCarousel";
-import { Separator } from "@/components/ui/separator";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -38,7 +37,7 @@ export default function Collection({ collection }: CollectionProps) {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto px-6 mb-24"
       >
-        <span className="text-[10px] md:text-xsd font-bold tracking-[0.3em] text-primary uppercase mb-6 block">
+        <span className="text-[10px] md:text-xs font-bold tracking-[0.3em] text-primary uppercase mb-6 block">
           Project Detail
         </span>
         <h1 className="font-serif font-medium text-5xl md:text-7xl lg:text-8xl mb-8 text-foreground leading-none tracking-tight">
@@ -48,6 +47,9 @@ export default function Collection({ collection }: CollectionProps) {
         <p className="font-sans text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl">
           {collection.description}
         </p>
+        <span className="text-[10px] font-sans font-bold tracking-[0.3em] uppercase text-muted-foreground/40 mt-6">
+          {collection.collectionData.length} Works
+        </span>
       </motion.div>
 
       {/* Full Width Image Section */}
