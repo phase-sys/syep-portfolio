@@ -47,9 +47,8 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 1.1, duration: 0.8 }}
         >
-          Art Direction{" "}
-          <span className="text-primary/40 mx-2">•</span> Visual Design{" "}
-          <span className="text-primary/40 mx-2">•</span> Curation
+          Art Direction <span className="text-primary/40 mx-2">•</span> Visual
+          Design <span className="text-primary/40 mx-2">•</span> Curation
         </motion.p>
       </motion.div>
 
